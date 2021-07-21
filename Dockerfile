@@ -1,4 +1,4 @@
-FROM 65.2.70.57:8083/repository/php_mysql_app/php:5
+FROM 65.2.70.57:8083/repository/php_mysql_app/php:6
 
 RUN apt-get update && apt-get install -y
 
