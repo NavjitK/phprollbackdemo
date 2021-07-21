@@ -3,7 +3,7 @@ services:
   php:
     build:
       context: .
-    image: 13.235.79.98:8083/repository/php_mysql_app/phpnew_php:59
+    image: 13.235.79.98:8083/repository/php_mysql_app/phpnew_php:5
     networks:
       - frontend
       - backend
@@ -19,7 +19,7 @@ services:
       - "30001:80"
     container_name: moe-php-app
   mysql:
-    image: 13.235.79.98:8083/repository/php_mysql_app/mysql:59
+    image: 13.235.79.98:8083/repository/php_mysql_app/mysql:5
     networks:
       - backend
     environment:
@@ -32,7 +32,7 @@ services:
       - .:/var/www/html/
       - ./employees.sql:/docker-entrypoint-initdb.d/employees.sql
   phpmyadmin:
-    image: 13.235.79.98:8083/repository/php_mysql_app/phpmyadmin/phpmyadmin:59
+    image: 13.235.79.98:8083/repository/php_mysql_app/phpmyadmin/phpmyadmin:5
     depends_on:
       - mysql
     networks:
