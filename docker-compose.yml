@@ -24,9 +24,7 @@ services:
       - MYSQL_USER=moeuser
       - MYSQL_PASSWORD=moepass 
       - MYSQL_DATABASE=moe_db
-    container_name: moe-mysql-app
-    volumes:
-      - ./employees.sql:/docker-entrypoint-initdb.d/employees.sql
+    container_name: moe-mysql-app 
   phpmyadmin:
     image: 65.2.70.57:8083/repository/php_mysql_app/phpmyadmin/phpmyadmin:6
     depends_on:
@@ -37,9 +35,7 @@ services:
       - "30002:80"
     environment:
       - PMA_HOST=moe-mysql-app
-      - PMA_PORT= 3306 
-    volumes:
-      - /sessions   
+      - PMA_PORT= 3306     
     container_name: moe-phpmyadmin-app
 networks:
   frontend:
