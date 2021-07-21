@@ -17,7 +17,7 @@ services:
       - "30001:80"
     container_name: moe-php-app
   mysql:
-    image: 65.2.70.57:8083/repository/php_mysql_app/mysql:6
+    image: 65.2.70.57:8083/repository/php_mysql_app/mysql:7
     networks:
      - frontend
      - backend
@@ -28,7 +28,7 @@ services:
       - MYSQL_DATABASE=moe_db
     container_name: moe-mysql-app    
   phpmyadmin:
-    image: 65.2.70.57:8083/repository/php_mysql_app/phpmyadmin/phpmyadmin:6
+    image: 65.2.70.57:8083/repository/php_mysql_app/phpmyadmin/phpmyadmin:7
     depends_on:
       - mysql
     networks:
