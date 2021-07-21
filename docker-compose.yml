@@ -3,11 +3,7 @@ services:
   php:
     build:
       context: .
-    image: 65.2.70.57:8083/repository/php_mysql_app/phpdemo_php:6
-    networks:
-      - frontend
-      - backend
-
+    image: 65.2.70.57:8083/repository/php_mysql_app/phpdemo_php:6  
     ports:
       - "30003:80"
     container_name: moe-php-app
