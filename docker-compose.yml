@@ -18,8 +18,9 @@ services:
       - "30001:80"
     container_name: moe-php-app
   mysql:
-    image: mymysqlimage
+    image: 65.2.70.57:8083/repository/php_mysql_app/mysql:6
     networks:
+     - frontend
       - backend
     environment:
       - MYSQL_ROOT_PASSWORD=rootpassword
