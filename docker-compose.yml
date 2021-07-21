@@ -19,14 +19,16 @@ services:
   mysql:
     image: 65.2.70.57:8083/repository/php_mysql_app/mysql:7
     networks:
-     - frontend
-     - backend
+      - backend
     environment:
       - MYSQL_ROOT_PASSWORD=rootpassword
       - MYSQL_USER=moeuser
       - MYSQL_PASSWORD=moepass 
       - MYSQL_DATABASE=moe_db
-    container_name: moe-mysql-app    
+    container_name: moe-mysql-app
+    volumes:
+      - .:/var/www/html/
+      - ./employees.sql:/docker-entrypoint-initdb.d/employees.sql
   phpmyadmin:
     image: 65.2.70.57:8083/repository/php_mysql_app/phpmyadmin/phpmyadmin:7
     depends_on:
