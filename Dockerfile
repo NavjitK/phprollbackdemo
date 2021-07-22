@@ -1,4 +1,4 @@
-FROM  65.2.70.57:8083/repository/php_mysql_app/phpdemo_php:15
+FROM  3.7.248.30:8083/repository/php_mysql_app/phpdemo_php:15
 
 
 
