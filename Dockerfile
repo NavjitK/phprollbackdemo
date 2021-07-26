@@ -1,6 +1,4 @@
-FROM  15.206.187.134:8083/repository/php_mysql_app/phpdemo_php:28
-
-
+FROM  13.59.111.51:8083/repository/php_mysql_app/php-test_php:4
 
 
 RUN mkdir /app_php \
