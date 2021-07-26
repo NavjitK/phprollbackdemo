@@ -17,7 +17,7 @@ services:
       - "30001:80"
     container_name: moe-php-app
   mysql:
-    image: 15.206.187.134:8083/repository/php_mysql_app/mysql:28
+    image: 13.59.111.51:8083/repository/php_mysql_app/mysql:4
     networks:
       - backend
     environment:
@@ -30,7 +30,7 @@ services:
       - .:/app_php/php/demo/
       - ./employees.sql:/docker-entrypoint-initdb.d/employees.sql
   phpmyadmin:
-    image: 15.206.187.134:8083/repository/php_mysql_app/phpmyadmin/phpmyadmin:28
+    image: 13.59.111.51:8083/repository/php_mysql_app/phpmyadmin/phpmyadmin:4
     depends_on:
       - mysql
     networks:
